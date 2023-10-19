@@ -1,0 +1,62 @@
+
+GET http://localhost:3000/products/
+
+### 
+POST http://localhost:3000/products/cart
+content-type: application/json
+
+[
+        {
+        "uuid": "dc49f325-8d3a-415c-8767-1b4b23c06505",
+        "title": "Barra de chocolate",
+        "description": "Una rica barra de chocolate",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate1.jpg",
+        "unit": "pieza",
+        "stock": 10,
+        "pricePerUnit": 15.99,
+        "category": "barra"
+    },
+    {
+        "uuid": "55bb9e7d-4673-480d-bfb2-c684a7c5e87d",
+        "title": "Surtido de chocolates",
+        "description": "Una rica barra de chocolate",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate2.jpg",
+        "unit": "pieza",
+        "stock": 15,
+        "pricePerUnit": 20,
+        "category": "surtido"
+    }
+]
+
+###
+GET http://localhost:3000/products/dc49f325-8d3a-415c-8767-1b4b23c06505
+
+###
+POST http://localhost:3000/admin/products
+content-type: application/json
+x-auth: admin
+
+{
+    "title": "Objeto de prueba",
+    "description": "prueba",
+    "imageURL": "prueba",
+    "unit": "pieza",
+    "stock": 15,
+    "pricePerUnit": 20,
+    "category": "surtido"
+}
+
+###
+PUT http://localhost:3000/admin/products/1b7b166f-25c2-4337-a082-52159cf0cb17
+content-type: application/json
+x-auth: admin
+
+{
+    "title": "Pito",
+    "description": "Pitote"
+}
+
+###
+DELETE http://localhost:3000/admin/products/1b7b166f-25c2-4337-a082-52159cf0cb17
+content-type: application/json
+x-auth: admin

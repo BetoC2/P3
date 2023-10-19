@@ -1,0 +1,11 @@
+.img_product {
+    max-height: 380px;
+    min-height: 100px;
+    object-fit: cover;
+}
+
+.cart_product_img {
+    float: right;
+    max-width: 120px;
+    min-width: 50px;
+}

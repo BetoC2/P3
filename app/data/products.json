@@ -1,0 +1,82 @@
+[
+    {
+        "uuid": "dc49f325-8d3a-415c-8767-1b4b23c06505",
+        "title": "Barra de chocolate",
+        "description": "Una rica barra de chocolate",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate1.jpg",
+        "unit": "pieza",
+        "stock": 10,
+        "pricePerUnit": 15.99,
+        "category": "barra"
+    },
+    {
+        "uuid": "55bb9e7d-4673-480d-bfb2-c684a7c5e87d",
+        "title": "Surtido de chocolates",
+        "description": "Una rica barra de chocolate",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate2.jpg",
+        "unit": "pieza",
+        "stock": 15,
+        "pricePerUnit": 20,
+        "category": "surtido"
+    },
+    {
+        "uuid": "d4073f44-6ba8-427e-9f2d-adbc79e68fb2",
+        "title": "Trufas",
+        "description": "Muy autodescriptivo",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate3.jpg",
+        "unit": "pieza",
+        "stock": 70,
+        "pricePerUnit": 50.5,
+        "category": "surtido"
+    },
+    {
+        "uuid": "617bab3c-679e-49b5-af1d-7b73976c0f80",
+        "title": "Brownie de chocolate",
+        "description": "Un rico brownie con una cubierta de chocolate",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate4.jpg",
+        "unit": "pieza",
+        "stock": 6,
+        "pricePerUnit": 17.33,
+        "category": "pan"
+    },
+    {
+        "uuid": "3d13b7d9-e366-480f-a21a-4396bb9aff16",
+        "title": "Galletas",
+        "description": "Galletas con chispas de chocolate :)",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate5.jpg",
+        "unit": "pieza",
+        "stock": 0,
+        "pricePerUnit": 10.99,
+        "category": "galletas"
+    },
+    {
+        "uuid": "300e8b38-a708-4660-9d5f-76242c561f24",
+        "title": "Chocolates ricos",
+        "description": "La especialidad de la casa",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate6.jpg",
+        "unit": "pieza",
+        "stock": 20,
+        "pricePerUnit": 25.99,
+        "category": "surtido"
+    },
+    {
+        "uuid": "d31551a0-de44-46a6-bc1c-eeb65cdc2df2",
+        "title": "Macarrones Oscuros",
+        "description": "Macarrones de chocolate amargo",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate7.jpg",
+        "unit": "pieza",
+        "stock": 5,
+        "pricePerUnit": 12.75,
+        "category": "macarrones"
+    },
+    {
+        "uuid": "1b91ec1c-196a-4b30-baaa-89d75a620b97",
+        "title": "Macarrones",
+        "description": "Los clásicos macarrones de BetoShop",
+        "imageURL": "https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate8.jpg",
+        "unit": "pieza",
+        "stock": 12,
+        "pricePerUnit": 18.99,
+        "category": "macarrones"
+    }
+]

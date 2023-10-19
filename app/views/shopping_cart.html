@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BetoShop Cart</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e53bd6b73c.js" crossorigin="anonymous"></script>
+
+    <!-- Modal de login -->
+    <div class="modal fade" id="modal_login" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sing_in">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <label for="email">Correo</label>
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="email" name="correo" id="email"
+                                placeholder="Ingresa tu correo" required>
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                        </div>
+                        <label for="password">Contraseña</label>
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="email" name="contraseña" id="password"
+                                placeholder="Ingresa tu contraseña" required>
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-key"></i>
+                            </span>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div>
+                        <p>¿No tienes cuenta? <a class="btn-link" role="button" data-bs-toggle="modal"
+                                data-bs-target="#modal_register">Regístrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de registro -->
+    <div class="modal fade" id="modal_register" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Registrarse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="nombre_nuevo" id="new_name"
+                                    placeholder="Nombre(s)">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="apellidos_nuevos" id="new_lastname"
+                                    placeholder="Apellidos">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="correo_nuevo" id="new_mail"
+                                    placeholder="Tu correo">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="contraseña_nueva" id="new_pass"
+                                    placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="confirmar_contra" id="confirm_pass"
+                                    placeholder="Confirmar contraseña">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input name="registrar" id="registrar" class="btn btn-success" type="button" value="Registrarse">
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here. -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-center">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <img src="https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/logo.png" alt="logo"
+                         height="45px" width="45px">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html" aria-current="page">Inicio<span
+                                    class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="P01_about_us.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Productos</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="P01_cat_A.html">Categoría A</a>
+                                <a class="dropdown-item" href="P01_cat_B.html">Categoría B</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline d-flex my-2 my-lg-0">
+                                <input class="form-control mr-sm-2 mx-2" type="text" placeholder="Buscar objetos...">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="p-2">
+                        <a role="button" data-bs-toggle="modal" data-bs-target="#modal_login">
+                            <i class="fa-solid fa-user"> </i> Ingresar
+                        </a>
+                    </div>
+                    <div class="p-2">
+                        <a role="button" href="P01_cart.html" style="text-decoration: none; color: #212529;">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                    <div class="p-2">
+                        <a href="P01_orders.html" role="button" style="text-decoration: none; color: #212529;">
+                            <i class="fa-solid fa-box"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-lg-7 col-sm-11 me-lg-4 mb-sm-2">
+                    <div class="d-flex border container ">
+                        <div class="flex-grow-1 ms-3 p-2">
+                            <h5 class="mt-0">Chocolate
+                                <button class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </h5>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Cantidad:
+                                </span>
+                                <input class="form-control" type="number" name="cantidad" id="cantidad1" value="2">
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Precio:
+                                </span>
+                                <input class="form-control" type="text" name="precio" id="prize1" value="50.00">
+                                <span class="input-group-text">
+                                    MXN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 col-lg-6 col-md-auto col-sm-auto p-3">
+                            <img src="https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate1.jpg" alt="" class="cart_product_img rounded-3">
+                        </div>
+                    </div>
+                    <div class="d-flex border container ">
+                        <div class="flex-grow-1 ms-3 p-2">
+                            <h5 class="mt-0">Galletas
+                                <button class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </h5>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Cantidad:
+                                </span>
+                                <input class="form-control" type="number" name="cantidad" id="cantidad2" value="5">
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Precio:
+                                </span>
+                                <input class="form-control" type="text" name="precio" id="prize2" value="70.00">
+                                <span class="input-group-text">
+                                    MXN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 col-lg-6 col-md-auto col-sm-auto p-3">
+                            <img src="https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate5.jpg" alt="" class="cart_product_img rounded-3">
+                        </div>
+                    </div>
+                    <div class="d-flex border container ">
+                        <div class="flex-grow-1 ms-3 p-2">
+                            <h5 class="mt-0">Macarrones
+                                <button class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </h5>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Cantidad:
+                                </span>
+                                <input class="form-control" type="number" name="cantidad" id="cantidad3" value="3">
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text" style="width: 100px;">
+                                    Precio:
+                                </span>
+                                <input class="form-control" type="text" name="precio" id="prize3" value="110.00">
+                                <span class="input-group-text">
+                                    MXN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 col-lg-6 col-md-auto col-sm-auto p-3">
+                            <img src="https://raw.githubusercontent.com/BetoC2/PWeb/main/assets/chocolate8.jpg" alt="" class="cart_product_img rounded-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-11">
+                    <div class="border p-3">
+                        <h4>Total de compra:</h4>
+                        <p><b>Chocolate:</b> 2 x 50.00 MXN</p>
+                        <p><b>Galletas:</b> 5 x 70.00 MXN</p>
+                        <p><b>Macarrones:</b> 3 x 110.00 MXN</p>
+                        <p><b>Costo de envío:</b> 75.00 MXN</p>
+
+                        <h4 class="mb-2">Total: 855.00 MXN</h4>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary mb-2" style="width: 90px;">Pagar</button>
+                            <br>
+                            <button type="button" class="btn btn-danger mb-2" style="width: 90px;">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                                crossorigin="anonymous">
+                                </script>
+
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+                                    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+                                    crossorigin="anonymous">
+                                    </script>
+</body>
+
+</html>
